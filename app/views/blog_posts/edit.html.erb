@@ -1,0 +1,7 @@
+<h1>Editing <%= @blog_post.title %></h1>
+
+<%= render partial: 'form' %>
+
+<%= button_to 'Delete Post', @blog_post, method: :delete, data: { turbo_confirm: "Are you sure?" }%>
+<br><br>
+<%= link_to 'Back', @blog_post %>

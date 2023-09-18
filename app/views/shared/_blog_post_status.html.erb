@@ -1,0 +1,15 @@
+<% if current_user && blog.draft? %>
+  <div class="bg-gray-200 text-gray-500 text-xs font-bold py-1 px-3 rounded inline-block">
+    <span>Draft post</span>
+  </div>
+<% elsif current_user && blog.scheduled? %>
+  <div class="bg-blue-500 text-white text-xs font-bold py-1 px-3 rounded inline-block">
+    <span>Scheduled post</span>
+  </div>
+<% else %>
+  <% if current_user %>
+    <div class="bg-green-500 text-white text-xs font-bold py-1 px-3 rounded inline-block">
+      <span>Live!</span>
+    </div>
+  <% end %>
+<% end %>

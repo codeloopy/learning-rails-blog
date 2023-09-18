@@ -1,9 +1,13 @@
-<h1>Blog posts</h1>
+<h1 class="text-6xl mb-4">Ped's blog</h1>
+
 <% @blog_posts.each do |blog| %>
   <div>
-    <h2>
-      <%= link_to blog.title, blog %>
-    </h2>
-    <!-- <p><%#= blog.body %></p> -->
+    <div>
+      <h2 class="inline-block mt-4 mb-0">
+        <%= link_to blog.title, blog %>
+      </h2>
+      <%= render partial: 'shared/blog_post_status', locals: {blog: blog} %>
+      <p class="mt-2"><%= blog.body.truncate(30) %></p>
+    </div>
   </div>
 <% end %>

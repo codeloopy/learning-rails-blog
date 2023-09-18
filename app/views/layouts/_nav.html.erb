@@ -2,8 +2,8 @@
   <p>Welcome: <%= current_user.email.split('@').first.capitalize %></p>
   <%#= link_to 'Profile', edit_user_registration_path %>
   <%= link_to 'New Blog', new_blog_post_path %>
-  <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+  <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "bg-red-500 text-white text-xs font-bold py-1 px-3 rounded inline-block" %>
 <% else %>
   <%#= link_to 'Register', new_user_registration_path %>
-  <%= link_to 'Log in', new_user_session_path %>
+  <%= link_to 'Log in', new_user_session_path, class: "bg-blue-500 text-white text-xs font-bold py-1 px-3 rounded inline-block" %>
 <% end %>

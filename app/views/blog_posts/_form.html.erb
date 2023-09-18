@@ -16,5 +16,9 @@
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
-  <%= form.button %>
+  <div>
+    <%= form.label :published_at%>
+    <%= form.datetime_select :published_at, include_blank: true %>
+  </div>
+  <%= form.button class: "bg-green-200 text-sm font-bold py-1 px-3 rounded inline-block my-4" %>
 <% end %>

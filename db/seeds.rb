@@ -7,4 +7,4 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 user = User.where(email: 'pixelpedro@email.com').first_or_initialize
-user.update!(password: 'password123', password_confirmation: 'password123')
+user.update!(password: 'p@$$w3rd!', password_confirmation: 'p@$$w3rd!')
